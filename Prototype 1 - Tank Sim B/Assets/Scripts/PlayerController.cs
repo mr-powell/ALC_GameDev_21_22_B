@@ -10,15 +10,7 @@ public class PlayerController : MonoBehaviour
     public float hInput;
     //Forward and Back Input
     public float vInput;
-
-    // projectile
-
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
-
+        
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +19,7 @@ public class PlayerController : MonoBehaviour
         vInput = Input.GetAxis("Vertical");
         
         // Makes the vehicle go left and right
-        transform.Rotate(Vector3.top, turnSpeed * hInput * Time.deltaTime);
+        transform.Rotate(Vector3.up, turnSpeed * hInput * Time.deltaTime);
         // Makes the vehicle go forward and back
         transform.Translate(Vector3.forward * speed * Time.deltaTime * vInput);
     }
