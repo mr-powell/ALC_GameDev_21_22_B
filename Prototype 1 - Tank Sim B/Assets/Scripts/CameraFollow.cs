@@ -12,6 +12,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //The cameras position copies the tanks with an offset
         transform.position = tank.transform.position + offset;
     }
 }
